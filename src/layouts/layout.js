@@ -13,15 +13,15 @@ const Layout = ({ children, additionalClass = [] }) => (
         {children}
         <Contact
             additionalClass={['my-5']}
-            socialIconsHeaderText="Find us"
-            formHeaderText="Contact us"
-            nameInputLabel="Name"
+            socialIconsHeaderText="Sigueme"
+            formHeaderText="Contactame"
+            nameInputLabel="Nombre"
             emailInputLabel="Email"
-            messageInputLabel="Message"
-            buttonLabel="Contact"
+            messageInputLabel="Mensaje"
+            buttonLabel="Enviar"
             phoneNumber="+123 456 789"
-            address="Demo Street"
-            emailAddress="hello@world.com"
+            address="Valdivia - Chile"
+            emailAddress="la.provinciana.ana@gmail.com"
         />
         <Footer />
     </main>
