@@ -11,9 +11,9 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: 'Flotiq gatsby starter boilerplate',
-        description: 'Flotiq gatsby starter boilerplate',
-        siteUrl: 'https://flotiqgatsbyshop1.gatsbyjs.io',
+        title: 'Productos La Provinciana',
+        description: 'Productos La Provinciana',
+        siteUrl: 'https://amezalaprov.github.io/',
     },
     plugins: [
         {
