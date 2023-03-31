@@ -31,12 +31,12 @@ const IndexPage = ({ data }) => {
             <BestSellers
                 products={products}
                 additionalClass={['bg-green-gray py-14']}
-                headerText="Bestsellers"
+                headerText="Los más vendidos"
             />
             <Products
                 products={products}
                 additionalClass={['my-5']}
-                headerText="Products"
+                headerText="Productos"
             />
         </Layout>
     );
