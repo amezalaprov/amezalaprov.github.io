@@ -2,18 +2,18 @@
     <img src="https://editor.flotiq.com/fonts/fq-logo.svg" alt="Flotiq logo" title="Flotiq" align="right" height="60" />
 </a>
 
-Gatsby shop starter with Flotiq source
-===========================
+# Gatsby shop starter with Flotiq source
 
 Kick off your project with this event boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 Live Demo: https://flotiqgatsbyshop1.gatsbyjs.io
 
 This project use:
-* [Flotiq](https://flotiq.com) - Headless CMS for string your data (You can create account [here](https://editor.flotiq.com/register.html))
-* [Tailwind](https://tailwindcss.com/) - utility-first CSS framework
-* [Flotiq source plugin](https://github.com/flotiq/gatsby-source-flotiq) - connector for fetching data from Flotiq
-* [Flotiq components for react](https://flotiq.github.io/flotiq-components-react) - components library designed and written to work perfectly with Flotiq Content Objects and display your data beautifully
+
+-   [Flotiq](https://flotiq.com) - Headless CMS for string your data (You can create account [here](https://editor.flotiq.com/register.html))
+-   [Tailwind](https://tailwindcss.com/) - utility-first CSS framework
+-   [Flotiq source plugin](https://github.com/flotiq/gatsby-source-flotiq) - connector for fetching data from Flotiq
+-   [Flotiq components for react](https://flotiq.github.io/flotiq-components-react) - components library designed and written to work perfectly with Flotiq Content Objects and display your data beautifully
 
 This project works on node >=18.0.0, as require Gatsby 5.
 
@@ -21,23 +21,25 @@ This project works on node >=18.0.0, as require Gatsby 5.
 
 Start the project from template using [Flotiq CLI](https://github.com/flotiq/flotiq-cli)
 
- ```bash
+```bash
 npm install -g flotiq-cli
 flotiq start [projectName] https://github.com/flotiq/flotiq-gatsby-shop-1.git [flotiqApiKey]
 ```
-* `projectName` - Project path (if you wish to start project in the current directory - use `.`)
-* `flotiqApKey` - [Read and write API key](https://flotiq.com/docs/API/#application-api-keys) to your Flotiq account
+
+-   `projectName` - Project path (if you wish to start project in the current directory - use `.`)
+-   `flotiqApKey` - [Read and write API key](https://flotiq.com/docs/API/#application-api-keys) to your Flotiq account
 
 This command will:
-- create project based on template using the `gatsby new` command
-- install npm dependencies
-- setup variables in the .env file
-- import example data to you Flotiq account using the `flotiq import` command
-- start development server using the `gatsby develop` command
+
+-   create project based on template using the `gatsby new` command
+-   install npm dependencies
+-   setup variables in the .env file
+-   import example data to you Flotiq account using the `flotiq import` command
+-   start development server using the `gatsby develop` command
 
 ![](https://api.flotiq.com/image/0x0/_media-96fcf787-552d-498c-ad47-8a43a76e7cc4.gif)
 
-## Configuration 
+## Configuration
 
 Environment variables are stored in the `.env` files.
 The `.env.development` file inside the root of the directory should have the following structure:
@@ -47,9 +49,10 @@ GATSBY_FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
 SNIPCART_API_KEY=YOUR SNIPCART API KEY
 GA_MEASUREMENT_ID=YOUR MEASUREMENT ID
 ```
+
 To add `SNIPCART API KEY` to your starter you need to log in to the website: https://snipcart.com/
 
-After this you need to get into your account options and choose `API KEYS` line or you can just click [in the link.](   https://app.snipcart.com/dashboard/account/credentials)
+After this you need to get into your account options and choose `API KEYS` line or you can just click [in the link.](https://app.snipcart.com/dashboard/account/credentials)
 
 To see how snipcart shop is working you need to copy `PUBLIC TEST API KEY` and paste it into your `.env` file instead `YOUR SNIPCART API KEY`.
 
@@ -106,8 +109,9 @@ _Note: To simplify this process you can configure [Gatsby Refreshing Content](ht
 When you update the data in Flotiq you have to rebuild project using `gatsby build` command.
 
 If you use hosting services listed below you can simplify the process:
-- For Gatsby Cloud use [Flotiq Gatsby plugin](https://flotiq.com/docs/panel/Plugins/Gatsby-cloud-integration/#installing-the-gatsby-plugin)
-- For Netlify use [Flotiq Netlify plugin](https://flotiq.com/docs/panel/Plugins/Netlify-integration/#installing-the-netlify-plugin)
+
+-   For Gatsby Cloud use [Flotiq Gatsby plugin](https://flotiq.com/docs/panel/Plugins/Gatsby-cloud-integration/#installing-the-gatsby-plugin)
+-   For Netlify use [Flotiq Netlify plugin](https://flotiq.com/docs/panel/Plugins/Netlify-integration/#installing-the-netlify-plugin)
 
 For other services you can configure [Webhook](https://flotiq.com/docs/panel/webhooks/examples/) on data change or manually rebuild site in hosting service.
 
@@ -124,7 +128,6 @@ You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minut
 Or to [Netlify](https://www.netlify.com/):
 
 [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/flotiq-gatsby-shop-1)
-
 
 ## What's inside?
 
@@ -217,9 +220,9 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+-   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-- **To dive straight into code samples, head [to the gatsby documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+-   **To dive straight into code samples, head [to the gatsby documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 ## Learning Flotiq
 
@@ -233,3 +236,4 @@ If you wish to talk with us about this project, feel free to hop on our [![Disco
 
 If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-gatsby-shop-1/issues).
 
+.
