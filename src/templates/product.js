@@ -67,17 +67,15 @@ const ExamplePage = ({ data }) => {
             {/* Content of <head> tag */}
             <Helmet>
                 <title>{product.title}</title>
-                <meta
-                    name="description"
-                    content={product.description}
-                />
+                <meta name="description" content={product.description} />
             </Helmet>
             <div className="flex flex-wrap max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                    className="flex basis-full lg:basis-1/2"
-                >
+                <div className="flex basis-full lg:basis-1/2">
                     <GatsbyImage
-                        image={getImage(product.productImage[0] && product.productImage[0].localFile)}
+                        image={getImage(
+                            product.productImage[0] &&
+                                product.productImage[0].localFile
+                        )}
                         alt={product.name}
                         objectFit="contain"
                         objectPosition="top"
@@ -91,7 +89,9 @@ const ExamplePage = ({ data }) => {
                         {product.name}
                     </Header>
                     <Header
-                        additionalClasses={['text-xl md:text-4xl uppercase !font-light !pb-0']}
+                        additionalClasses={[
+                            'text-xl md:text-4xl uppercase !font-light !pb-0',
+                        ]}
                     >
                         {`$${product.price}`}
                     </Header>
@@ -119,7 +119,7 @@ const ExamplePage = ({ data }) => {
                                     ))}
                                 </select>
                             </div>
-                        </div> */}
+                        </div> 
                         <div className="flex items-center justify-between text-xl font-light py-7 uppercase">
                             Quantity
                             <div className="flex items-center md:items-stretch ml-8 font-roboto bg-light-gray ">
@@ -144,20 +144,26 @@ const ExamplePage = ({ data }) => {
                                     <PlusIcon className="h-5 w-5" aria-hidden="true" />
                                 </button>
                             </div>
-                        </div>
+                        </div> 
                         <Button
                             label={buttonLabel}
                             rounded="none"
                             size="sm"
-                            additionalClasses={['bg-transparent justify-center uppercase !text-base font-light',
-                                'text-primary border shadow-none uppercase !px-5 !py-4 mt-1', 'snipcart-add-item']}
+                            additionalClasses={[
+                                'bg-transparent justify-center uppercase !text-base font-light',
+                                'text-primary border shadow-none uppercase !px-5 !py-4 mt-1',
+                                'snipcart-add-item',
+                            ]}
                             data-item-id={product.slug}
                             data-item-price={product.price}
-                            data-item-image={product.productImage[0] && product.productImage[0].localFile.publicURL}
+                            data-item-image={
+                                product.productImage[0] &&
+                                product.productImage[0].localFile.publicURL
+                            }
                             data-item-name={product.name}
                             data-item-url="/"
                             data-item-quantity={quantity}
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
@@ -177,74 +183,80 @@ const ExamplePage = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-query ProductBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    product(slug: {eq: $slug}) {
-      name
-      price
-      slug
-      description
-      id
-      productImage {
-        extension
-        url
-        width
-        height
-        localFile {
-          publicURL
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
-          }
-        }
-      }
-      productGallery {
-        localFile {
-          publicURL
-        }
-      }
-    }
-    allProduct(
-      sort: {flotiqInternal: {createdAt: DESC}}
-      limit: 5
-      filter: {slug: {ne: $slug}}
-    ) {
-      nodes {
-        name
-        price
-        slug
-        description
-        id
-        productGallery {
-          extension
-          url
-          width
-          height
-          localFile {
-            publicURL
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+    query ProductBySlug($slug: String!) {
+        site {
+            siteMetadata {
+                title
             }
-          }
         }
-        productImage {
-          extension
-          url
-          width
-          height
-          localFile {
-            publicURL
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+        product(slug: { eq: $slug }) {
+            name
+            price
+            slug
+            description
+            id
+            productImage {
+                extension
+                url
+                width
+                height
+                localFile {
+                    publicURL
+                    childImageSharp {
+                        gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
+                    }
+                }
             }
-          }
+            productGallery {
+                localFile {
+                    publicURL
+                }
+            }
         }
-      }
+        allProduct(
+            sort: { flotiqInternal: { createdAt: DESC } }
+            limit: 5
+            filter: { slug: { ne: $slug } }
+        ) {
+            nodes {
+                name
+                price
+                slug
+                description
+                id
+                productGallery {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(
+                                layout: FULL_WIDTH
+                                placeholder: NONE
+                            )
+                        }
+                    }
+                }
+                productImage {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(
+                                layout: FULL_WIDTH
+                                placeholder: NONE
+                            )
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 `;
 
 export default ExamplePage;
