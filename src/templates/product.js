@@ -167,17 +167,17 @@ const ExamplePage = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <ReviewsSection
+            {/* <ReviewsSection
                 headerText="Reviews"
                 reviews={reviews}
                 avatar={Avatar}
                 additionalClass={['my-10 lg:my-24']}
-            />
+            /> 
             <CustomersChoice
                 products={products}
                 additionalClass={['my-5']}
-                headerText="Other customers also chose"
-            />
+                headerText="Otros usuarios también vieron"
+            /> */}
         </Layout>
     );
 };

@@ -17,7 +17,7 @@ const socialIcons = {
     social: [
         {
             name: 'Facebook',
-            href: 'https://www.facebook.com/flotiq',
+            href: 'https://www.facebook.com/profile.php?id=100093233376794',
             icon: (props) => (
                 <svg fill="currentColor" viewBox="0 0 13 25" {...props}>
                     <path
@@ -132,7 +132,7 @@ const Contact = ({
                 </div>
                 <div className="flex flex-col space-y-2 uppercase text-lg font-normal w-fit">
                     <p>
-                        Address:
+                        Ubicacion:
                         <span className="ml-5 font-light">{address}</span>
                     </p>
                     <p>
